@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>找单词小游戏</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container" id="gamePage">
+
+<h1>找单词小游戏</h1>
+
+<div class="topbar">
+
+<button id="startBtn">开始游戏</button>
+<button id="settingsBtn" class="secondary">导入单词</button>
+<button id="historyBtn" class="secondary">历史记录</button>
+
+<button id="musicBtn">音乐</button>
+<button id="soundBtn">音效</button>
+
+</div>
+
+<div class="timer">
+⏰ <span id="time">0</span>s
+</div>
+
+<div class="wordlist" id="words"></div>
+
+<div class="grid" id="grid"></div>
+
+</div>
+
+
+<div class="history-page" id="historyPage">
+
+<div class="history-content">
+
+<h2>📜 历史记录</h2>
+
+<div id="historyList"></div>
+
+<button class="bigbtn" onclick="clearHistory()">🗑️ 清空记录</button>
+<button class="bigbtn secondary" onclick="backToGame()">🔙 返回</button>
+
+</div>
+
+</div>
+
+
+<div class="overlay" id="settingsOverlay">
+
+<div class="modal">
+
+<h3>导入单词</h3>
+
+<p style="font-size:13px;color:#666">
+用逗号或空格分隔单词
+</p>
+
+<textarea id="wordInput"></textarea>
+
+<button class="bigbtn" onclick="saveWords()">保存</button>
+
+</div>
+
+</div>
+
+
+<div class="overlay" id="resultOverlay">
+
+<div class="modal result-modal">
+
+<div class="stars" id="starsContainer"></div>
+
+<h2>🎉 恭喜通关！</h2>
+
+<p>用时 <span id="finalTime"></span>秒</p>
+<p>得分 <span id="finalScore"></span>分</p>
+
+<button class="bigbtn" onclick="restart()">🔄 再来一局</button>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
